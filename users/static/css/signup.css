@@ -1,0 +1,366 @@
+@import "styles.css";
+
+.container-signUp {
+    animation: PageUp 1s;
+}
+
+@keyframes PageUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container-1st {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:  
+    "js          jp";
+    place-items: center;
+    padding: 100px 400px;
+}
+
+.card-one {
+    grid-area: js;
+    border-radius: 30px;
+    height: 350px;
+    width: 400px;
+    background-color: white;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.card-two {
+    grid-area: jp;
+    border-radius: 30px;
+        height: 350px;
+        width: 400px;
+        background-color: white;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.card-one:hover, .card-two:hover {
+    background-color: var(--orange);
+    cursor: pointer;
+}
+input[type="radio"] {
+    height: 40px;
+    width: 40px;
+    margin: 50px 50px 0px 50px;
+    cursor: pointer;
+}
+.card-one span, .card-two span {
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    margin: 20px 50px;
+    font-family: 'Sifonn';
+}
+.card-one p, .card-two p {
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    margin: 20px 50px;
+    color: var(--blue);
+    font-family: 'Sifonn';
+}
+.container-ba-su {
+    justify-content: space-between;
+    display: flex;
+    padding: 50px 200px;
+}
+.container-ba-su button {
+    background-color: var(--blue);
+    font-family: "Work Sans";
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    flex: 0 0 auto;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition: all .2s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    cursor: pointer;
+
+}
+button:hover {
+    background-color: #423E37;
+}
+
+.error-message {
+    grid-area: error;
+    background-color: rgb(255, 78, 78);
+    color: white;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.step1, .step2, .step3 {
+    padding-top: 7rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 100px 50px;
+    margin: 150px 400px;
+}
+
+.circle-container {
+    padding: 100px 200px;
+    font-weight: 600;
+    position: absolute;
+    top: 100px;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.circle {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    font-size: 25px;
+    border-radius: 100%;
+    background-color:#E3B23C;
+    justify-content: center;
+    align-items: center;
+    color: #423E37;
+} 
+
+#stepText {
+    display: block;
+    font-size: 25px;
+    padding-left: 50px;
+}
+
+label {
+    font-size: 25px;
+    padding-left: 130px;
+}
+
+.step1 input, .step2 input, .step3 input {
+    box-shadow: inset #423E37 0 0 0 2px;
+    border: 0;
+    border-radius: 10px;
+    padding: 30px;
+    width: 500px;
+    font-size: 20px;
+    color: #423E37;
+    margin-left: 130px;
+}
+
+form {
+    display: grid;
+
+}
+.step1 input, .step2 input {
+    border-color: #423E37;
+    margin-top: 0.3rem;
+    border-radius: 10px;
+    border-color: #423E37;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.step3 {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "fname                            lname                                middlei"
+    "email                              email                                 pnumber"
+    "button-area-step3     button-area-step3        button-area-step3";
+    grid-row-gap: 2rem;
+
+}
+
+.email input {
+    width: 650px !important;
+}
+.middlei input {
+    width: 70px !important;
+}
+
+.step3 input {
+    margin-left: 70px;
+    margin-top: 0.3rem;
+    width: 300px;
+    display: flex;
+}
+.step3 label {
+  padding-left: 70px;
+}
+
+.pnumber {
+    grid-column: pnumber-start;
+}
+.pnumber input {
+    width: 200px !important;
+}
+
+
+
+
+button {
+    font-family: 'Work Sans';
+    background-color: #0496FF;
+    border: none;
+    padding: 25px 30px;
+    display: flex;
+    color: white;
+    border-radius: 8px;
+    font-size: 25px;
+    transition: all 0.3s;
+    align-items: center;
+    cursor: pointer;    
+}
+
+.button-area {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 100px;
+}
+
+.button-area-step2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px 0px 130px;
+}
+
+.button-area-step3 {
+    grid-area: button-area-step3;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px 0px 70px;
+}
+
+i {
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 1919px) {
+    .container-1st {
+        padding: 50px 250px;
+    }
+  .container-choose-text {
+            font-size: 50px;
+            padding: 20px 0px;
+        }
+        .container-mid {
+            padding: 0px 300px;
+        }
+        .card-one, .card-two  {
+            height: 250px;
+            width: 300px;
+        }
+        input[type="radio"] {
+            height: 30px;
+            width: 30px;
+            margin: 30px 20px 0px 30px;
+        }
+        .card-one span, .card-two span {
+            font-size: 35px;
+            margin: 30px 30px 15px 30px;
+        }
+        .card-one p, .card-two p {
+            font-size: 15px;
+            margin: 0px 20px 0px 30px;
+        }
+
+    .step1, .step2, .step3 {
+        padding-top: 7rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        padding: 110px 0px;
+        margin: 30px 300px;
+    }
+    .circle-container {
+        top: 50px;
+        left: 150px;
+        padding: 100px 200px 0px 200px;
+        
+    }
+    .circle {
+        height: 43px;
+        width: 43px;
+        font-size: 20px;
+    }
+
+    #stepText {
+        font-size: 20px;
+        padding: 25px;
+    }
+
+    label {
+        font-size: 20px;
+        padding-left: 120px;
+    }
+    .step1 input, .step2 input, .step3 input {
+        margin-left: 120px;
+        padding: 25px;
+    }
+    .step3 {
+        grid-template-columns: 40% 33.3% 33.3%;
+        grid-template-areas: 
+        "fname                            lname                                middlei"
+        "email                             pnumber                                 pnumber"
+        "button-area-step3     button-area-step3        button-area-step3";
+        grid-row-gap: 0.8rem;
+    }
+    .step3 input {
+        margin-left: 70px;
+        width: 200px;
+        padding: 20px;
+    }
+    .email input {
+        width: 318px !important;
+    }
+    .fname input {
+        width: 220px;
+    }
+    .lname input {
+        margin-left: 25px;
+        width: 220px;
+    }
+    .lname label {
+        padding-left: 25px;
+    }
+    .middlei input {
+        margin-left: 25px;
+    }
+    .middlei label {
+        padding-left: 25px;
+    }
+    .pnumber input{
+        margin-left: 130px;
+        width: 210px !important;
+    }
+    .pnumber {
+        grid-column: 2/4;
+    }
+    .pnumber label {
+        padding-left: 130px;
+    }
+    button {
+        padding: 20px 15px;
+        font-size: 20px;
+    }
+    .button-area {
+        padding: 0px 80px;
+    }
+    .button-area-step2 {
+        padding: 0px 80px 0px 120px;
+    }
+    .button-area-step3 {
+        padding: 20px 145px 10px 70px;
+    }
+
+}

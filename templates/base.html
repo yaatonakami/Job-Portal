@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="{% static 'image/favicon.png' %}" type="image/x-icon">
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/ee8dddfc09.js" crossorigin="anonymous"></script>
+
+    
+    <title>Job Portal | {% block title %} {% endblock %} </title>
+</head>
+<body> 
+
+    {% block nav%}
+      
+    {% endblock%}
+    <div id="main-container" class="container">
+        
+        {% block content %}  
+        
+
+        {% endblock%}
+        
+    </div>
+    
+
+</body>
+<script type="text/javascript" src="{{ STATIC_URL }} /static/jquery-3.6.2.min.js"></script> 
+<script src="{% static 'js/user.js'%}"></script>
+</html>

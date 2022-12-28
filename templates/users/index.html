@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+    Get Started
+{% endblock %}
+
+{% block nav%}
+        <!-- navbar -->
+  {% include 'partials/_navbarNoTabs.html' %}
+{% endblock%}
+
+
+{% block content%}
+        <div class="container-getstarted">
+                <div class="quotes">
+                        <span class="tag-line">
+                            Your next opportunity <br> is  just a click away. 
+                        </span>
+                        <br><br><br>
+
+                        <p class="quote">
+                            "The only way to do great work is to love what you do" <br>
+                            - Steve Jobs
+                        </p>
+                        <br><br>
+                        
+                        <div class="getstarted-Btn">
+                            <a href="loginview">
+                                <button>
+                                    Get Started
+                                </button>
+                            </a>
+                        </div>
+                </div>
+                
+                <div class="illus">
+                        <img class="mid" src="{% static 'image/Saly-22.svg' %}" alt="mid">
+                        <img  class="bot" src="{% static 'image/Saly-26.svg' %}"alt="bot">
+                        <img  class="top" src="{% static 'image/Saly-42.svg' %}" alt="top">
+                </div>
+        </div>
+        
+{% endblock %}

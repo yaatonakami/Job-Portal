@@ -1,0 +1,125 @@
+@import "styles.css";
+
+.container-choose {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 0fr;
+    grid-template-areas:  
+    "text"
+    "mid";
+    animation: PageUp 1s;
+}
+form {
+    display: block;
+}
+@keyframes PageUp {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+    .container-choose-text {
+        grid-area: text;
+        font-size: 80px;
+        font-weight: 600;
+        color: var(--blue);
+        display: grid;
+        place-items: center;
+        padding: 50px 0px;
+    }
+    .container-mid {
+        grid-area: mid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:  
+        "card-one           card-two";
+        place-items: center;
+        padding: 0px 400px;
+
+    }
+    .card-one {
+        grid-area: card-one;
+        border-radius: 30px;
+        height: 350px;
+        width: 400px;
+        background-color: white;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+    .card-two {
+        grid-area: card-two;
+        border-radius: 30px;
+        height: 350px;
+        width: 400px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        transition: all 0.5s;
+    }
+    .card-one:hover, .card-two:hover {
+        background-color: var(--orange);
+        cursor: pointer;
+    }
+     input[type="radio"] {
+        height: 40px;
+        width: 40px;
+        margin: 50px 50px 0px 50px;
+        cursor: pointer;
+    }
+   .card-one span, .card-two span {
+        font-size: 50px;
+        font-weight: 600;
+        display: flex;
+        margin: 20px 50px;
+        font-family: 'Sifonn';
+   }
+   .card-one p, .card-two p {
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    margin: 20px 50px;
+    color: var(--blue);
+    font-family: 'Sifonn';
+}
+    .container-button-area {
+        display: flex;
+        justify-content: space-between;
+        display: flex;
+        padding: 50px 200px;
+    }
+
+    @media screen and (max-width: 1919px) {
+        .container-choose-text {
+            font-size: 50px;
+            padding: 20px 0px;
+        }
+        .container-mid {
+            padding: 0px 300px;
+        }
+        .card-one, .card-two  {
+            height: 250px;
+            width: 300px;
+        }
+        input[type="radio"] {
+            height: 30px;
+            width: 30px;
+            margin: 30px 20px 0px 30px;
+        }
+        .card-one span, .card-two span {
+            font-size: 35px;
+            margin: 30px 30px 15px 30px;
+        }
+        .card-one p, .card-two p {
+            font-size: 15px;
+            margin: 0px 20px 0px 30px;
+        }
+
+
+
+
+    }

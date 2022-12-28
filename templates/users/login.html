@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+    Log in
+{% endblock %}
+
+
+
+{% block content%}
+
+
+{% if error_message %}
+        <p class = "error-message"> 
+            {{ error_message }}
+        </p>
+{% endif %}
+
+        <div class="container-login">
+                <div class="container-illus">
+        
+                    <img class="mid-login" src="{% static 'image/Saly-22.svg' %}" alt="mid">
+                    <img  class="bot-login" src="{% static 'image/Saly-26.svg' %}"alt="bot">
+                    <img  class="top-login" src="{% static 'image/Saly-42.svg' %}" alt="top">
+                </div>
+                <div class="container-credentials">
+                        <div class="container-signup">
+                                <a href="/users/signup">
+                                    <div class="containerJS">
+                                    <span>Sign up</span>
+                                    </div>
+                                </a>
+                        </div>
+
+                        <div class="container-icon">
+                            <img src="{% static 'image/SpotCareer.svg' %}" alt="Logo">
+                        </div>
+
+                        <form action="{% url 'users:process' %}" method="post" class="login-form">
+                            {% csrf_token %}
+
+                        <div class="container-input">
+                            <p class="login"> Log In </p>
+                            <iconify-icon class="icon-user" icon="mingcute:user-1-fill" style="color: #423E37;" ></iconify-icon>
+                            <input type="text" name="username" id="username" placeholder= "username" required>
+                            <iconify-icon class="icon-lock" icon="mingcute:lock-line" style="color: #423E37; "></iconify-icon>
+                            <input type="password" name="password" id="password" placeholder="password" required>
+                        </div>
+
+                        <div class="container-signIn">
+                            <button type="submit"> Sign In</button>
+                        </div>
+                        </form>
+
+                </div>
+        </div>
+{% endblock %}

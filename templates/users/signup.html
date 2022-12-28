@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+
+{% block title%}
+    Job Seeker Sign Up
+{% endblock %}
+
+{% block nav %}
+            <!-- navbar -->
+            {% include 'partials/_navbar.html' %}
+{% endblock %}
+
+{% block content%}
+
+
+
+{% if error_message %}
+        <p class = "error-message"> 
+            {{ error_message }}
+        </p>
+{% endif %}
+
+
+<div class="container-signUp">
+        <div class="step" id="step">
+        <form action="{% url 'users:processadd' %}" method="post"  id = "form2"  enctype="multipart/form-data">
+            {% csrf_token %}
+
+                <div id= "1st" class="container-1st" style="display: grid;">
+                <div class="card-one" id="one">
+                <input id="r1" type="radio" name= "user_type" value="Job Seeker" required>
+                <span id="js">Job <br>Seeker</span>
+                <p id="p1">I am looking for a job</p>
+                </div>  
+                
+                <div class="card-two" id="two">
+                <input id="r2" type="radio" name= "user_type" value="Job Provider" required>
+                <span id="jp">Job <br>Provider</span>
+                <p id="p2">We are looking for an expert</p>
+                </div>
+                </div>
+
+                <div class="container-ba-su" id="con-ba-su">
+                    <a href="/users/loginview">
+                    <button type="button">Previous</button>
+                    </a>
+
+                    <button id="btn-next" type="button">Next</button>
+                </div>
+    
+            <div class="circle-container" id="con-circle" style="display: none;">
+                <div class="circle" id="steps">  1  </div>
+                <span id="stepText">choose an username that can easily remembered...</span>
+            </div>
+    
+            <div id = "step1" class="step1" style="display: none;">
+ 
+                <label>Username</label>
+                <input type="text" name="username" id="username" placeholder= "Ex. yatonakami" required>
+                
+                <div class="button-area" >
+                    <button id="next1" type="button"> <i class="fa fa-forward"> </i> Next </button>
+                </div>
+            </div>  
+        
+            <div id="step2"  class="step2" style="display: none;">
+                <label>Password</label>
+                <input type="password" name="password" id="password" required>
+                
+                <div class="button-area-step2">
+                    <button id = "back2" type = "button"> <i class="fa fa-backward"> </i> </button>
+                    <button id = "next2" type = "button"> <i class="fa fa-forward"> </i> Next </button>
+                </div>
+            </div>  
+
+            <div id="step3" class="step3" style="display: none;">
+                <div class="fname">
+                    <label id="label1">First name</label>
+                    <input type="text" name="fname" id="fname" required>
+                </div>
+                <div class="lname">
+                    <label id="label2">Last name</label>
+                    <input type="text" name="lname" id="lname" required>
+                </div>
+                <div class="middlei">
+                    <label id="label3">Middle i.</label>
+                    <input type="text" name="middlei" id="middlei">
+                </div>
+                <div class="email">
+                    <label id="label4">Work email address</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="pnumber">
+                    <label id="label5">Phone number</label>
+                    <input type="text" name="pnumber" id="pnumber" required>
+                </div>
+            
+                <div class="button-area-step3" >
+                    <button id="back3" type="button"> <i class="fa fa-backward"> </i> </button>
+                   
+                    <button id="submit" type="submit"> <i class="fa fa-forward"> </i> Create Account 
+                    </button>
+            </div>  
+        </form>
+    </div>
+    </div>
+</div>
+{% endblock %}

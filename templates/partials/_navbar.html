@@ -1,0 +1,9 @@
+{% load static %}
+<nav class="navbar">
+    <div class="container-nav">
+        <img src="{% static 'image/SpotCareer.svg' %}" alt="SpotCareer">
+        <a href="home">View Table</a>
+        <a href="{% url 'users:detail' user.id %}">Profile</a>
+    </div>
+
+</nav>

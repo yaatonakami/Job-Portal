@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home 
+{% endblock %}
+
+{% block nav %}
+  <!-- navbar -->
+  {% include 'partials/_navbar.html' %}
+{% endblock %}
+
+{% block content %}
+{% if user_list %}
+<div class="container-table">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User Type</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Middle Initial</th>
+                <th>Username</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+                <th>Profile Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in user_list %}
+            <tr>
+                <td>{{ user.user_type }}</td>
+                <td>{{ user.user_fname }}</td>
+                <td>{{ user.user_lname }}</td>
+                <td>{{ user.user_initial }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.user_email }}</td>
+                <td>{{ user.user_pnumber }}</td>
+                <td>
+                        <a href="{% url 'users:detail' user.id %}">
+                    <img src="media/{{ user.user_image }}" alt="user_image" width="50px" justify-content = "center"></td>
+                    </a>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+
+{% endblock%}
